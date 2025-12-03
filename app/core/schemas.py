@@ -14,3 +14,6 @@ class Pagination(BaseModel):
     @property
     def offset(self) -> int:
         return (self.page - 1) * self.limit
+
+class TokenPayload(BaseModel):
+    user_id: int
